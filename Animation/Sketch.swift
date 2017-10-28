@@ -25,7 +25,7 @@ class Sketch : NSObject {
         //clean up draw whit rectangle over whole canvas
         
         
-        
+       canvas.drawShapesWithBorders = false
         
         // Change position
         offset += 1
@@ -36,23 +36,22 @@ class Sketch : NSObject {
         
         //blue circle going left (-)
         
-        canvas.fillColor = Color(hue: 0, saturation: 80, brightness: 0, alpha: 100)
+        canvas.fillColor = Color(hue: 230, saturation: 63, brightness: 60, alpha: 100)
         canvas.drawEllipse(centreX: 500 - offset, centreY: 166, width: 50, height: 50)
         
         
         //green circle going right (+)
         
-        canvas.fillColor = Color(hue: 0, saturation: 80, brightness: 0, alpha: 100)
+        canvas.fillColor = Color(hue: 131, saturation: 63, brightness: 60, alpha: 100)
         canvas.drawEllipse(centreX: offset, centreY: 249, width: 50, height: 50)
         
         //orange circle going left (-)
         
-        canvas.fillColor = Color(hue: 0 ,saturation: 80, brightness: 0, alpha: 100)
+        canvas.fillColor = Color(hue: 38, saturation: 100, brightness: 54, alpha: 100)
         canvas.drawEllipse(centreX: 500 - offset, centreY: 332, width: 50, height: 50)
         
         //purple circle going right (+)
-        
-        canvas.fillColor = Color(hue: 0 ,saturation: 80, brightness: 0, alpha: 100)
+        canvas.fillColor = Color(hue: 266 ,saturation: 63, brightness: 60, alpha: 97)
         canvas.drawEllipse(centreX: offset, centreY: 415, width: 50, height: 50)
         
         
