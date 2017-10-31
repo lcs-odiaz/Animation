@@ -9,16 +9,20 @@ class Sketch : NSObject {
     // Position of circle
     var x : Int
     var y : Int
-    var d : Int
+    var dy : Int
+    var dx: Int
     // This function runs once
     override init() {
         
         // Create canvas object – specify size
         canvas = Canvas(width: 500, height: 500)
-        y = 250
-        d = 0
+        
         // Set starting position
-        x = 250
+        y = random(from: 1, toButNotIncluding: 499)
+        x = random(from: 1, toButNotIncluding: 499)
+        // Set change value
+        dx = random(from: 1, toButNotIncluding: 100)
+        dy = random(from: 1, toButNotIncluding: 100)
         
     }
     
@@ -28,13 +32,23 @@ class Sketch : NSObject {
         canvas.drawRectangle(centreX: 250, centreY: 250, width: 500, height: 500)
         // Change position
         
+        canvas.drawAxes()
+        x += dx
+        y += dy
         
-        
-        if x < 0 {
-            x -= 1
+        if y > 500{
+            dy = random(from: -150, toButNotIncluding: -1)
         }
-        if x == 250{
-            x += 1
+        
+        if y < 0{
+            dy = random(from: 1, toButNotIncluding: 150)
+        }
+        
+        if x < 2{
+             dx = random(from: 1, toButNotIncluding: 150)
+        }
+        if x > 500{
+            dx = random(from: -150, toButNotIncluding: -1)
         }
 
         // Draw an ellipse in the middle of the canvas
