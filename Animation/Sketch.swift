@@ -37,18 +37,18 @@ class Sketch : NSObject {
         y += dy
         
         if y > 500{
-            dy = random(from: -150, toButNotIncluding: -1)
+            dy = random(from: -50, toButNotIncluding: -1)
         }
         
         if y < 0{
-            dy = random(from: 1, toButNotIncluding: 150)
+            dy = random(from: 1, toButNotIncluding: 50)
         }
         
         if x < 2{
-             dx = random(from: 1, toButNotIncluding: 150)
+             dx = random(from: 1, toButNotIncluding: 50)
         }
         if x > 500{
-            dx = random(from: -150, toButNotIncluding: -1)
+            dx = random(from: -50, toButNotIncluding: -1)
         }
 
         // Draw an ellipse in the middle of the canvas
